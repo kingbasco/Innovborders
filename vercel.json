@@ -1,0 +1,10 @@
+{
+    "redirects": [
+      {
+        "source": "https://innovborders.com/:path*",
+        "destination": "https://www.innovborders.com/:path*",
+        "permanent": true
+      }
+    ]
+  }
+  
