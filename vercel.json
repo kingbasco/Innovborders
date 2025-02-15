@@ -1,6 +1,13 @@
 {
     "routes": [
       {
+        "src": "^innovborders.com/(.*)",
+        "headers": {
+          "Location": "https://www.innovborders.com/$1"
+        },
+        "status": 301
+      },
+      {
         "src": "/(.*)",
         "dest": "/$1.html",
         "headers": {
