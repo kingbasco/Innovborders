@@ -1,10 +1,18 @@
 {
-    "redirects": [
+    "routes": [
       {
-        "source": "https://innovborders.com/:path*",
-        "destination": "https://www.innovborders.com/:path*",
-        "permanent": true
+        "src": "/(.*)",
+        "dest": "/$1.html",
+        "headers": {
+          "Cache-Control": "public, max-age=0, must-revalidate"
+        }
+      },
+      {
+        "src": "/(.*)/",
+        "dest": "/$1.html",
+        "headers": {
+          "Cache-Control": "public, max-age=0, must-revalidate"
+        }
       }
     ]
   }
-  
