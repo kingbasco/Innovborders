@@ -1,18 +1,13 @@
 /* Open Conversations: editorial page and homepage feature, using brand tokens only. */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
-
 .open-conversations-slide, .oc-page {
   --oc-ink: var(--brand-ink, #191919);
   --oc-accent: var(--brand-accent, #fca311);
   --oc-muted: var(--brand-muted, #565656);
   --oc-line: var(--brand-line, #dedede);
   --oc-paper: var(--brand-paper, #ffffff);
-  font-family: 'Catamaran', sans-serif;
+  font-family: var(--oslim-font);
 }
-.oc-page h1,.oc-page h2,.oc-page h3,.open-conversations-slide h2 {
-  font-family: 'DM Sans', 'Catamaran', sans-serif;
-  letter-spacing:-.035em;
-}
+/* Headlines inherit the site's Catamaran family from oslim.css. */
 /* Documentary photography: real Lagos community gathering.
    Desola Lanre-Ologun / Unsplash (free under the Unsplash License).
    This is illustrative, not a photograph of Open Conversations itself. */
@@ -34,7 +29,6 @@
   background: linear-gradient(90deg, rgba(20,20,20,.84) 0%, rgba(20,20,20,.74) 38%, rgba(20,20,20,.34) 74%, rgba(20,20,20,.18) 100%),
               linear-gradient(180deg, rgba(20,20,20,.35), transparent 40%, rgba(20,20,20,.28));
 }
-.open-conversations-slide .oc-slide-main { max-width: 750px; }
 .open-conversations-slide .oc-slide-photo-credit {
   position: absolute;
   z-index: 35;
@@ -48,39 +42,9 @@
 }
 .open-conversations-slide .oc-slide-photo-credit a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 .open-conversations-slide .oc-slide-photo-credit a:hover { color: var(--oc-accent); }
-.main-slider-two .open-conversations-slide .container {
-  padding-top: 188px; padding-bottom: 160px; min-height: 680px;
-  display:flex; align-items:center;
-}
-.open-conversations-slide .container > .row { width: 100%; }
-.main-slider-two .open-conversations-slide .oc-slide-content {
-  max-width: 1060px; margin: 0 auto; text-align:left;
-  display: block;
-}
-.open-conversations-slide .oc-slide-folio {
-  color:var(--oc-accent);font-size:13px;line-height:1.4;font-weight:800;
-  letter-spacing:.11em;margin:0 0 23px;
-}
-.main-slider-two .open-conversations-slide h2 {
-  font-size:clamp(52px,6.3vw,88px);line-height:1.02;font-weight:800;
-  margin:0 0 20px;max-width:770px;text-wrap:balance;
-}
-.open-conversations-slide h2 span { color:var(--oc-accent); }
-.open-conversations-slide .oc-slide-theme { font-size:22px;line-height:1.35;font-weight:700;color:#ffffff;margin:0 0 12px; }
-.open-conversations-slide .oc-slide-summary {
-  font-size:17px;line-height:1.65;color:#ffffff;max-width:610px;margin:0 0 28px;
-}
-.open-conversations-slide .oc-slide-actions { display:flex;flex-wrap:wrap;gap:20px;align-items:center; }
-.open-conversations-slide .oc-slide-actions .thm-btn {
-  color:var(--oc-ink);background:var(--oc-accent);padding:16px 30px 12px;
-  font-size:13px;letter-spacing:.06em;
-}
-.open-conversations-slide .oc-slide-actions .thm-btn:hover {color:#fff;}
-.open-conversations-slide .oc-slide-location {
-  font-size:13px;line-height:1.5;color:#fff;margin:25px 0 0;
-}
-.open-conversations-slide .oc-slide-location span { display:inline-block;margin-right:18px; }
-
+/* The featured slide intentionally inherits the same Catamaran type scale,
+   centered alignment, tagline, button, padding and slide animation as
+   the other homepage .main-slider-two slides. */
 /* Programme page */
 .oc-page { color:var(--oc-ink); }
 .oc-page p { color:var(--oc-muted); }
@@ -127,7 +91,7 @@
 .oc-prose p {margin:0 0 18px;}
 .oc-feature-statement {border-top:3px solid var(--oc-accent);padding-top:28px;}
 .oc-feature-statement blockquote {
-  font-family:'DM Sans','Catamaran',sans-serif; font-weight:700;font-size:clamp(23px,2.4vw,35px);
+  font-family:var(--oslim-font); font-weight:700;font-size:clamp(23px,2.4vw,35px);
   letter-spacing:-.025em;line-height:1.3;color:var(--oc-ink);margin:0;
 }
 .oc-feature-statement cite {display:block;font-style:normal;font-size:14px;margin-top:22px;color:var(--oc-muted);}
@@ -166,12 +130,6 @@
  .oc-outcomes {grid-template-columns:repeat(2,minmax(0,1fr));gap:35px;}
 }
 @media(max-width:767px){
- .main-slider-two .open-conversations-slide .container {min-height:650px;padding-top:165px;padding-bottom:120px;}
- .main-slider-two .open-conversations-slide h2 {font-size:clamp(45px,12vw,64px);line-height:1.04;}
- .open-conversations-slide .oc-slide-theme {font-size:19px;}
- .open-conversations-slide .oc-slide-summary {font-size:16px;}
- .open-conversations-slide .oc-slide-folio {font-size:11px;}
- .open-conversations-slide .oc-slide-location {font-size:12px;}
  .oc-page-hero {padding:62px 0 68px;}
  .oc-page-hero h1 {font-size:clamp(43px,10.3vw,64px);}
  .oc-section {padding:68px 0;}
@@ -196,11 +154,11 @@
 /* Match the existing page-header and breadcrumb pattern without decorative
    color or typography drift from the programme design system. */
 .oc-page-header .page-header__inner .oc-page-header__title {
-  font-family: 'DM Sans', 'Catamaran', sans-serif;
+  font-family: var(--oslim-font);
   font-size: clamp(32px, 4.4vw, 55px);
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.18;
-  letter-spacing: -.025em;
+  letter-spacing: normal;
   color: #fff;
   margin: 18px 0 0;
 }
