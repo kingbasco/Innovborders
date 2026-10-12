@@ -10,7 +10,7 @@ colors:
   border: "#dedede"
 typography:
   display:
-    fontFamily: "DM Sans, Catamaran, sans-serif"
+    fontFamily: "Catamaran, sans-serif"
     fontSize: "clamp(3rem, 7vw, 6rem)"
     fontWeight: 800
     lineHeight: 1.04
@@ -55,7 +55,7 @@ No purple, lilac, arbitrary pastel or gradient accent systems. Neutral greys and
 
 ## Typography
 
-The site retains Catamaran for shared UI/body copy and introduces DM Sans selectively for large programme headings. A clear, well-kerned heading and generous text measure are preferable to glowing text, gradients or novelty type. Aim for 65–75 characters in long-form copy.
+Catamaran is the established, exclusive site font for headings, slide titles, navigation, buttons and body copy. New programme pages must inherit the existing `--oslim-font` rather than importing a separate display typeface. Keep readable hierarchy with the existing font's size and weight scale. Aim for 65–75 characters in long-form copy.
 
 ## Layout
 
@@ -74,7 +74,7 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 - **Navigation:** Home, Projects, Open Conversations and FAQs appear in the same order across all public HTML routes. The active page has \`aria-current="page"\`; mobile navigation is generated from the same markup.
 - **Primary button:** Orange background, near-black text. On hover, near-black surface and white text. Visible keyboard focus.
 - **Programme sections:** Editorial headings, factual metadata, ruled narrative blocks, selective two-column reading patterns, and a clear ending contact action.
-- **Homepage slider:** One feature slide for Open Conversations, reusing Swiper and maintaining the existing slides and controls.
+- **Homepage slider:** The Open Conversations feature must use the existing `main-slider__content`, `section-title__tagline`, `h2` and `thm-btn` pattern without bespoke font, layout, heading-size, button or animation overrides. Reuse Swiper and maintain the other slides and controls. Its documentary event photograph may have a neutral text-legibility overlay and a small image credit.
 
 ## Do's and Don'ts
 
@@ -83,5 +83,5 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 - **Do** make the first viewport answer what the gathering is and why it matters.
 - **Don't** imply the tentative venue, date or a registration form has been confirmed.
 - **Don't** restore the completed $100 Challenge promotion to homepage or primary navigation.
-- **Don't** use decorative glowing gradients, equal-height icon cards, repetitive uppercase eyebrow pills, or purposeless motion.
+- **Don't** use an additional font or an unrelated hero layout. Avoid decorative glowing gradients, equal-height icon cards, repetitive uppercase eyebrow pills, or purposeless motion.
 - **Don't** redesign unrelated project content as part of programme updates.
