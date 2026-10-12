@@ -45,6 +45,46 @@
 /* The featured slide intentionally inherits the same Catamaran type scale,
    centered alignment, tagline, button, padding and slide animation as
    the other homepage .main-slider-two slides. */
+/* Supporting copy stays in the existing centered slider layout.
+   Use the website's Catamaran font and standard title/button components. */
+.open-conversations-slide h2 span { color: var(--oc-accent); }
+.main-slider-two .open-conversations-slide .main-slider__content {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.open-conversations-slide .oc-slide-theme {
+  color: #fff;
+  font-size: clamp(19px, 2vw, 23px);
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0 auto 10px;
+}
+.open-conversations-slide .oc-slide-summary {
+  max-width: 700px;
+  margin: 0 auto 26px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.65;
+}
+.open-conversations-slide .oc-slide-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 5px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 22px 0 0;
+}
+@media (max-width: 767px) {
+  .open-conversations-slide .oc-slide-theme { font-size: 18px; }
+  .open-conversations-slide .oc-slide-summary { font-size: 16px; max-width: 480px; }
+  .open-conversations-slide .oc-slide-location { font-size: 12px; column-gap: 15px; }
+}
+
 /* Programme page */
 .oc-page { color:var(--oc-ink); }
 .oc-page p { color:var(--oc-muted); }
