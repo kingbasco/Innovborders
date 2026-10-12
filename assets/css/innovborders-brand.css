@@ -1,0 +1,29 @@
+/* InnovBorders brand layer. Loaded after the legacy template styles on every public page. */
+:root {
+  --oslim-base: #fca311;
+  --oslim-base-rgb: 252, 163, 17;
+  --oslim-black: #191919;
+  --oslim-black-rgb: 25, 25, 25;
+  --oslim-gray: #565656;
+  --oslim-gray-rgb: 86, 86, 86;
+  --oslim-extra: #f6f6f6;
+  --oslim-extra-rgb: 246, 246, 246;
+  --brand-accent: #fca311;
+  --brand-ink: #191919;
+  --brand-paper: #ffffff;
+  --brand-muted: #565656;
+  --brand-line: #dedede;
+}
+::selection { background: var(--brand-accent); color: var(--brand-ink); }
+:focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 3px; }
+.thm-btn { color: var(--brand-ink); }
+.thm-btn:visited { color: var(--brand-ink); }
+.thm-btn:hover, .thm-btn:hover:visited { color: #ffffff; }
+.main-menu .main-menu__list>li.current>a::before,
+.stricky-header .main-menu__list>li.current>a::before { transform: scale(1, 1); }
+.main-menu .main-menu__list>li>a:focus-visible,
+.stricky-header .main-menu__list>li>a:focus-visible,
+.site-footer a:focus-visible { outline-color: var(--brand-accent); }
+@media (max-width: 1199px) {
+  .mobile-nav__content .main-menu__list a { text-transform: none; }
+}
