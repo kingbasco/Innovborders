@@ -117,7 +117,7 @@
 }
 .oc-experience-list li:last-child {border-bottom:1px solid var(--oc-line);}
 .oc-stage-heading {display:flex;align-items:baseline;gap:24px;}
-.oc-stage-heading small {font-size:13px;line-height:1.5;font-weight:800;color:var(--oc-accent);}
+.oc-stage-heading small {font-size:13px;line-height:1.5;font-weight:800;color:var(--oc-ink);border-bottom:2px solid var(--oc-accent);}
 .oc-stage-heading h3 {font-size:clamp(22px,2.6vw,31px);font-weight:800;margin:0;line-height:1.25;}
 .oc-experience-list p {max-width:690px;margin:0;}
 .oc-detail-grid {display:grid;grid-template-columns:1fr 1fr;gap:clamp(35px,9vw,140px);}
@@ -153,7 +153,7 @@
  .open-conversations-slide .oc-slide-folio {font-size:11px;}
  .open-conversations-slide .oc-slide-location {font-size:12px;}
  .oc-page-hero {padding:62px 0 68px;}
- .oc-page-hero h1 {font-size:clamp(51px,11vw,72px);}
+ .oc-page-hero h1 {font-size:clamp(43px,10.3vw,64px);}
  .oc-section {padding:68px 0;}
  .oc-experience-list li {grid-template-columns:1fr;gap:13px;padding:25px 0;}
  .oc-stage-heading {gap:18px;}
