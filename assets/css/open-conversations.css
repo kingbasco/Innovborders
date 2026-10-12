@@ -13,11 +13,41 @@
   font-family: 'DM Sans', 'Catamaran', sans-serif;
   letter-spacing:-.035em;
 }
-.open-conversations-slide { background: var(--oc-ink); }
+/* Documentary photography: real Lagos community gathering.
+   Desola Lanre-Ologun / Unsplash (free under the Unsplash License).
+   This is illustrative, not a photograph of Open Conversations itself. */
+.main-slider .swiper-slide.open-conversations-slide { background-color: #191919; }
 .main-slider .open-conversations-slide .image-layer,
 .main-slider .swiper-slide-active.open-conversations-slide .image-layer {
-  background: var(--oc-ink); opacity:1; transform:none; transition:none;
+  background-color: #565656;
+  background-image: url("https://images.unsplash.com/photo-1634937734976-7b0432527d5d?auto=format&fit=crop&w=2000&q=82");
+  background-size: cover;
+  background-position: center 43%;
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
+.main-slider .open-conversations-slide .image-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20,20,20,.84) 0%, rgba(20,20,20,.74) 38%, rgba(20,20,20,.34) 74%, rgba(20,20,20,.18) 100%),
+              linear-gradient(180deg, rgba(20,20,20,.35), transparent 40%, rgba(20,20,20,.28));
+}
+.open-conversations-slide .oc-slide-main { max-width: 750px; }
+.open-conversations-slide .oc-slide-photo-credit {
+  position: absolute;
+  z-index: 35;
+  right: clamp(20px,4vw,70px);
+  bottom: 20px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #fff;
+  text-shadow: 0 1px 4px rgba(0,0,0,.9);
+}
+.open-conversations-slide .oc-slide-photo-credit a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.open-conversations-slide .oc-slide-photo-credit a:hover { color: var(--oc-accent); }
 .main-slider-two .open-conversations-slide .container {
   padding-top: 188px; padding-bottom: 160px; min-height: 680px;
   display:flex; align-items:center;
@@ -25,8 +55,7 @@
 .open-conversations-slide .container > .row { width: 100%; }
 .main-slider-two .open-conversations-slide .oc-slide-content {
   max-width: 1060px; margin: 0 auto; text-align:left;
-  display:grid; grid-template-columns:minmax(0, 1.75fr) minmax(220px, .7fr);
-  gap:clamp(40px,7vw,105px); align-items:end;
+  display: block;
 }
 .open-conversations-slide .oc-slide-folio {
   color:var(--oc-accent);font-size:13px;line-height:1.4;font-weight:800;
@@ -47,12 +76,6 @@
   font-size:13px;letter-spacing:.06em;
 }
 .open-conversations-slide .oc-slide-actions .thm-btn:hover {color:#fff;}
-.open-conversations-slide .oc-slide-aside {
-  border-top:2px solid var(--oc-accent);padding:20px 0 0;
-  color:#fff;align-self:end;margin-bottom:3px;
-}
-.open-conversations-slide .oc-slide-aside p {font-size:15px;line-height:1.65;color:#fff;margin:0 0 14px;}
-.open-conversations-slide .oc-slide-aside strong {display:block;font-size:14px;color:var(--oc-accent);letter-spacing:.04em;margin:0 0 6px;}
 .open-conversations-slide .oc-slide-location {
   font-size:13px;line-height:1.5;color:#fff;margin:25px 0 0;
 }
@@ -137,7 +160,6 @@
 .oc-cta-note {font-size:13px!important;color:#fff!important;}
 .oc-cta .oc-page-action {white-space:nowrap;}
 @media(max-width:991px){
- .main-slider-two .open-conversations-slide .oc-slide-content {grid-template-columns:minmax(0,1fr) minmax(0,.4fr);gap:30px;}
  .oc-page-hero .oc-hero-grid,.oc-intro-grid {grid-template-columns:1fr;gap:38px;}
  .oc-event-facts {max-width:650px;}
  .oc-detail-grid {gap:35px;}
@@ -145,9 +167,7 @@
 }
 @media(max-width:767px){
  .main-slider-two .open-conversations-slide .container {min-height:650px;padding-top:165px;padding-bottom:120px;}
- .main-slider-two .open-conversations-slide .oc-slide-content {display:block;}
  .main-slider-two .open-conversations-slide h2 {font-size:clamp(45px,12vw,64px);line-height:1.04;}
- .open-conversations-slide .oc-slide-aside {display:none;}
  .open-conversations-slide .oc-slide-theme {font-size:19px;}
  .open-conversations-slide .oc-slide-summary {font-size:16px;}
  .open-conversations-slide .oc-slide-folio {font-size:11px;}
@@ -164,6 +184,34 @@
  .oc-hero-actions {gap:15px;}
  .oc-event-facts div {grid-template-columns:95px 1fr;}
 }
+@media (max-width: 767px) {
+ .main-slider .open-conversations-slide .image-layer,
+ .main-slider .swiper-slide-active.open-conversations-slide .image-layer { background-position: 54% center; }
+ .main-slider .open-conversations-slide .image-layer::after {
+   background: linear-gradient(90deg, rgba(20,20,20,.83), rgba(20,20,20,.48)),
+               linear-gradient(180deg, rgba(20,20,20,.42), transparent 30%, rgba(20,20,20,.42));
+ }
+ .open-conversations-slide .oc-slide-photo-credit { right: 20px; bottom: 13px; max-width: 60%; font-size: 10px; text-align: right; }
+}
+/* Match the existing page-header and breadcrumb pattern without decorative
+   color or typography drift from the programme design system. */
+.oc-page-header .page-header__inner .oc-page-header__title {
+  font-family: 'DM Sans', 'Catamaran', sans-serif;
+  font-size: clamp(32px, 4.4vw, 55px);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+  color: #fff;
+  margin: 18px 0 0;
+}
+.oc-page-header nav[aria-label="Breadcrumb"] { display: inline-block; }
+.oc-page-header .page-header-shape-1,
+.oc-page-header .page-header-shape-2 { display: none; }
+@media (max-width: 767px) {
+ .oc-page-header { padding: 145px 0 75px; }
+ .oc-page-header .page-header__inner .oc-page-header__title { font-size: 35px; }
+}
+
 @media(prefers-reduced-motion:reduce){
  .open-conversations-slide .image-layer,.open-conversations-slide h2,
  .open-conversations-slide .thm-btn {transition:none!important;animation:none!important;}
