@@ -79,9 +79,9 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 ## Do's and Don'ts
 
 - **Do** use \`#FCA311\` as the single accent throughout.
-- **Do** use real programme copy and stated facts: tentative 31 October 2026, Akure, in-person, 20–25 participants.
+- **Do** use real programme copy and stated facts: confirmed 31 October 2026, Akure, in-person, 25 participants. The exact venue will be shared with selected participants.
 - **Do** make the first viewport answer what the gathering is and why it matters.
-- **Don't** imply the tentative venue, date or a registration form has been confirmed.
+- **Do** use the confirmed Google Form expression-of-interest link: `https://forms.gle/ZQd4s63dsanmumyu5`. The date is 31 October 2026; the exact venue is shared only with selected participants. Do not invent an address or imply all applicants are selected.
 - **Don't** restore the completed $100 Challenge promotion to homepage or primary navigation.
 - **Don't** use an additional font or an unrelated hero layout. Avoid decorative glowing gradients, equal-height icon cards, repetitive uppercase eyebrow pills, or purposeless motion.
 - **Don't** redesign unrelated project content as part of programme updates.
