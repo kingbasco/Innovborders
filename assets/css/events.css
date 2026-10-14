@@ -1,6 +1,9 @@
 /* InnovBorders Events index: one focused row per event, Catamaran + #FCA311. */
 .events-page { background:#fff; color:var(--brand-ink); font-family:var(--oslim-font); }
 .events-page .page-header { margin:0; }
+.events-page__title { color:#fff; font-size:55px; font-weight:900; line-height:65px; margin:18px 0 0; }
+@media (max-width:767px) { .events-page__title { font-size:34px; line-height:42px; } }
+
 .events-intro { padding:88px 0 16px; }
 .events-intro__lead { max-width:760px; margin:0; color:var(--brand-muted); font-size:20px; line-height:1.65; }
 .events-section { padding:58px 0 78px; }
