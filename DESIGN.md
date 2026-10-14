@@ -42,7 +42,7 @@ components:
 
 **Current programme title:** Diaries of Project Managers: Real Problems, Real People, Real Projects.
 
-Use the full title in the homepage hero and programme page H1. Use "Diaries of Project Managers" for compact navigation and breadcrumbs. Retain the existing `/open-conversations` URL for backwards compatibility; URL paths and CSS selectors are not visible programme names.
+Use the full title in the homepage hero and programme page H1. Use "Diaries of Project Managers" for compact navigation and breadcrumbs. Use `/diaries-of-project-managers` as the canonical event URL. Redirect legacy `/open-conversations` to it for backwards compatibility; the existing CSS filename and selectors may retain their internal technical names.
 
 
 **Creative North Star: The Working Room.** The website should feel like a useful invitation into real conversations and practical work: editorial, confident, and human. Specific programme details and clear calls to action matter more than trend-driven illustration or decorative flourishes. This direction is documented from the site's existing static HTML/Catamaran template and the owner's confirmed accent-color decision.
@@ -77,7 +77,7 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 ## Components
 
 - **Navigation:** Home, Projects, Events (dropdown linking to Diaries of Project Managers and $100 Challenge), and FAQs appear in the same order across all public pages. Clicking Events opens the Events index page; its submenu items link directly to the two existing event pages. Use the built-in Oslim mobile dropdown and active-page styles; mobile navigation is generated from the desktop menu.
-- **Events classification:** `/events` has exactly two named sections, Upcoming Events and Past Events. Diaries of Project Managers ends 31 October 2026 and moves to Past Events starting 1 November 2026 by the `Africa/Lagos` local date; the $100 Challenge stays in Past Events. The original detail URLs `/open-conversations` and `/$100challenge` stay valid. The homepage challenge promotion must not return.
+- **Events classification:** `/events` has exactly two named sections, Upcoming Events and Past Events. Diaries of Project Managers ends 31 October 2026 and moves to Past Events starting 1 November 2026 by the `Africa/Lagos` local date; the $100 Challenge stays in Past Events. Use the event detail URLs `/diaries-of-project-managers` and `/$100challenge`; the old `/open-conversations` path must redirect permanently. The homepage challenge promotion must not return.
 - **Primary button:** Orange background, near-black text. On hover, near-black surface and white text. Visible keyboard focus.
 - **Programme sections:** Editorial headings, factual metadata, ruled narrative blocks, selective two-column reading patterns, and a clear ending contact action.
 - **Homepage slider:** The Diaries of Project Managers feature must use the existing `main-slider__content`, `section-title__tagline`, `h2` and `thm-btn` pattern without bespoke font, layout, heading-size, button or animation overrides. Reuse Swiper and maintain the other slides and controls. Its documentary event photograph may have a neutral text-legibility overlay and a small image credit.
