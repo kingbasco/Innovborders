@@ -27,3 +27,21 @@
 @media (max-width: 1199px) {
   .mobile-nav__content .main-menu__list a { text-transform: none; }
 }
+
+
+/* Program dropdown: existing Oslim markup, accessible to keyboard focus. */
+.main-menu .main-menu__list > li.program-menu:focus-within > ul,
+.stricky-header .main-menu__list > li.program-menu:focus-within > ul {
+  visibility: visible;
+  opacity: 1;
+}
+.main-menu .main-menu__list > li.program-menu > ul,
+.stricky-header .main-menu__list > li.program-menu > ul {
+  min-width: 220px;
+}
+@media (min-width: 1200px) {
+  /* Accommodate the extra top-level link without crowding the long programme label. */
+  .main-menu .main-menu__list > li + li,
+  .stricky-header .main-menu__list > li + li { margin-left: clamp(20px, 2.6vw, 38px); }
+  .main-menu-wrapper__logo { margin-right: clamp(34px, 5vw, 75px); }
+}
