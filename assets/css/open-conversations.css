@@ -1,4 +1,4 @@
-/* Open Conversations: editorial page and homepage feature, using brand tokens only. */
+/* Diaries of Project Managers: editorial programme and homepage feature, using brand tokens only. */
 .open-conversations-slide, .oc-page {
   --oc-ink: var(--brand-ink, #191919);
   --oc-accent: var(--brand-accent, #fca311);
@@ -10,7 +10,7 @@
 /* Headlines inherit the site's Catamaran family from oslim.css. */
 /* Documentary photography: real Lagos community gathering.
    Desola Lanre-Ologun / Unsplash (free under the Unsplash License).
-   This is illustrative, not a photograph of Open Conversations itself. */
+   This is illustrative, not a photograph of Diaries of Project Managers itself. */
 .main-slider .swiper-slide.open-conversations-slide { background-color: #191919; }
 .main-slider .open-conversations-slide .image-layer,
 .main-slider .swiper-slide-active.open-conversations-slide .image-layer {
@@ -85,6 +85,23 @@
   .open-conversations-slide .oc-slide-location { font-size: 12px; column-gap: 15px; }
 }
 
+/* The approved programme name is longer than the previous title.
+   Keep the existing Catamaran typeface, slider alignment and CTA components. */
+.main-slider-two .open-conversations-slide h2 {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(38px, 5vw, 70px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+.main-slider-two .open-conversations-slide h2 .oc-event-title-subline {
+  display: block;
+  font-size: .57em;
+  line-height: 1.22;
+  margin-top: .18em;
+}
+
 /* Programme page */
 .oc-page { color:var(--oc-ink); }
 .oc-page p { color:var(--oc-muted); }
@@ -97,10 +114,12 @@
   gap:clamp(40px,7vw,110px);align-items:end;
 }
 .oc-page-hero h1 {
-  color:var(--oc-ink);font-size:clamp(54px,7vw,98px);line-height:1.02;
-  max-width:860px;font-weight:800;margin:0 0 18px;text-wrap:balance;
+  color:var(--oc-ink);font-size:clamp(38px,4.8vw,64px);line-height:1.08;
+  max-width:100%;font-weight:800;margin:0 0 22px;text-wrap:balance;
 }
-.oc-page-hero h1 span {display:block;color:var(--oc-accent);}
+.oc-page-hero h1 span {
+  display:block;color:var(--oc-accent);font-size:.69em;line-height:1.18;margin-top:.18em;
+}
 .oc-hero-theme {font-size:clamp(20px,2.2vw,27px);font-weight:700;line-height:1.4;margin:0 0 18px;color:var(--oc-ink)!important;}
 .oc-hero-body {max-width:620px;font-size:18px;line-height:1.65;margin:0 0 28px;}
 .oc-page .oc-page-action {
@@ -171,7 +190,7 @@
 }
 @media(max-width:767px){
  .oc-page-hero {padding:62px 0 68px;}
- .oc-page-hero h1 {font-size:clamp(43px,10.3vw,64px);}
+ .oc-page-hero h1 {font-size:clamp(36px,8.7vw,54px);overflow-wrap:break-word;}
  .oc-section {padding:68px 0;}
  .oc-experience-list li {grid-template-columns:1fr;gap:13px;padding:25px 0;}
  .oc-stage-heading {gap:18px;}
