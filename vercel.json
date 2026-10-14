@@ -1,25 +1,32 @@
 {
-    "routes": [
-      {
-        "src": "^innovborders.com/(.*)",
-        "headers": {
-          "Location": "https://www.innovborders.com/$1"
-        },
-        "status": 301
+  "routes": [
+    {
+      "src": "^innovborders.com/(.*)",
+      "headers": {
+        "Location": "https://www.innovborders.com/$1"
       },
-      {
-        "src": "/(.*)",
-        "dest": "/$1.html",
-        "headers": {
-          "Cache-Control": "public, max-age=0, must-revalidate"
-        }
+      "status": 301
+    },
+    {
+      "src": "^/open-conversations(?:\\.html)?/?$",
+      "headers": {
+        "Location": "/diaries-of-project-managers"
       },
-      {
-        "src": "/(.*)/",
-        "dest": "/$1.html",
-        "headers": {
-          "Cache-Control": "public, max-age=0, must-revalidate"
-        }
+      "status": 301
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1.html",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
       }
-    ]
-  }
+    },
+    {
+      "src": "/(.*)/",
+      "dest": "/$1.html",
+      "headers": {
+        "Cache-Control": "public, max-age=0, must-revalidate"
+      }
+    }
+  ]
+}
