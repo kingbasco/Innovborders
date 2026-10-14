@@ -40,6 +40,11 @@ components:
 
 ## Overview
 
+**Current programme title:** Diaries of Project Managers: Real Problems, Real People, Real Projects.
+
+Use the full title in the homepage hero and programme page H1. Use "Diaries of Project Managers" for compact navigation and breadcrumbs. Retain the existing `/open-conversations` URL for backwards compatibility; URL paths and CSS selectors are not visible programme names.
+
+
 **Creative North Star: The Working Room.** The website should feel like a useful invitation into real conversations and practical work: editorial, confident, and human. Specific programme details and clear calls to action matter more than trend-driven illustration or decorative flourishes. This direction is documented from the site's existing static HTML/Catamaran template and the owner's confirmed accent-color decision.
 
 ## Colors
@@ -71,10 +76,10 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 
 ## Components
 
-- **Navigation:** Home, Projects, Open Conversations and FAQs appear in the same order across all public HTML routes. The active page has \`aria-current="page"\`; mobile navigation is generated from the same markup.
+- **Navigation:** Home, Projects, Diaries of Project Managers and FAQs appear in the same order across all public HTML routes. The active page has \`aria-current="page"\`; mobile navigation is generated from the same markup.
 - **Primary button:** Orange background, near-black text. On hover, near-black surface and white text. Visible keyboard focus.
 - **Programme sections:** Editorial headings, factual metadata, ruled narrative blocks, selective two-column reading patterns, and a clear ending contact action.
-- **Homepage slider:** The Open Conversations feature must use the existing `main-slider__content`, `section-title__tagline`, `h2` and `thm-btn` pattern without bespoke font, layout, heading-size, button or animation overrides. Reuse Swiper and maintain the other slides and controls. Its documentary event photograph may have a neutral text-legibility overlay and a small image credit.
+- **Homepage slider:** The Diaries of Project Managers feature must use the existing `main-slider__content`, `section-title__tagline`, `h2` and `thm-btn` pattern without bespoke font, layout, heading-size, button or animation overrides. Reuse Swiper and maintain the other slides and controls. Its documentary event photograph may have a neutral text-legibility overlay and a small image credit.
 
 ## Do's and Don'ts
 
