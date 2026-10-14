@@ -76,7 +76,7 @@ Use restrained 3–6px corners for controls. Avoid pill-like decorative labels, 
 
 ## Components
 
-- **Navigation:** Home, Projects, Diaries of Project Managers and FAQs appear in the same order across all public HTML routes. The active page has \`aria-current="page"\`; mobile navigation is generated from the same markup.
+- **Navigation:** Home, Projects, Diaries of Project Managers, Program (dropdown: $100 Challenge), and FAQs appear in the same order across all public HTML routes. The active page has \`aria-current="page"\`; mobile navigation is generated from the same markup. The $100 Challenge is a completed programme: restore its original winner page as an archive, but do not restore its former homepage promotional slide.
 - **Primary button:** Orange background, near-black text. On hover, near-black surface and white text. Visible keyboard focus.
 - **Programme sections:** Editorial headings, factual metadata, ruled narrative blocks, selective two-column reading patterns, and a clear ending contact action.
 - **Homepage slider:** The Diaries of Project Managers feature must use the existing `main-slider__content`, `section-title__tagline`, `h2` and `thm-btn` pattern without bespoke font, layout, heading-size, button or animation overrides. Reuse Swiper and maintain the other slides and controls. Its documentary event photograph may have a neutral text-legibility overlay and a small image credit.
